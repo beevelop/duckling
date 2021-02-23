@@ -8,7 +8,6 @@
 module Duckling.Numeral.PL.Tests
   ( tests ) where
 
-import Prelude
 import Data.String
 import Test.Tasty
 
@@ -18,5 +17,5 @@ import Duckling.Testing.Asserts
 
 tests :: TestTree
 tests = testGroup "PL Tests"
-  [ makeCorpusTest [This Numeral] corpus
+  [ makeCorpusTest [Seal Numeral] corpus
   ]

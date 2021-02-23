@@ -10,7 +10,6 @@ module Duckling.Duration.NL.Tests
   ) where
 
 import Data.String
-import Prelude
 import Test.Tasty
 
 import Duckling.Dimensions.Types
@@ -19,6 +18,6 @@ import Duckling.Testing.Asserts
 
 tests :: TestTree
 tests = testGroup "NL Tests"
-  [ makeCorpusTest [This Duration] corpus
-  , makeNegativeCorpusTest [This Duration] negativeCorpus
+  [ makeCorpusTest [Seal Duration] corpus
+  , makeNegativeCorpusTest [Seal Duration] negativeCorpus
   ]
