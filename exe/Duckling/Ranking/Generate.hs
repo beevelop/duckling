@@ -50,6 +50,7 @@ import qualified Duckling.Time.NL.BE.Corpus as NL_BETime
 import qualified Duckling.Time.PL.Corpus as PLTime
 import qualified Duckling.Time.PT.Corpus as PTTime
 import qualified Duckling.Time.RO.Corpus as ROTime
+import qualified Duckling.Time.RU.Corpus as RUTime
 import qualified Duckling.Time.SV.Corpus as SVTime
 import qualified Duckling.Time.UK.Corpus as UKTime
 import qualified Duckling.Time.VI.Corpus as VITime
@@ -95,7 +96,7 @@ regenClassifiers locale = do
 
     filepath = "Duckling/Ranking/Classifiers/" ++ moduleName ++ ".hs"
 
-    rules = rulesFor locale . HashSet.singleton $ This Time
+    rules = rulesFor locale . HashSet.singleton $ Seal Time
 
     -- | The trained classifier to write out
     classifiers = makeClassifiers rules trainSet
@@ -182,6 +183,7 @@ getCorpusForLang EN = ENTime.corpus
 getCorpusForLang ES = ESTime.corpus
 getCorpusForLang ET = (testContext, testOptions, [])
 getCorpusForLang FI = (testContext, testOptions, [])
+getCorpusForLang FA = (testContext, testOptions, [])
 getCorpusForLang FR = FRTime.corpus
 getCorpusForLang GA = GATime.corpus
 getCorpusForLang HR = HRTime.corpus
@@ -206,11 +208,12 @@ getCorpusForLang NL = NLTime.corpus
 getCorpusForLang PL = PLTime.corpus
 getCorpusForLang PT = PTTime.corpus
 getCorpusForLang RO = ROTime.corpus
-getCorpusForLang RU = (testContext, testOptions, [])
+getCorpusForLang RU = RUTime.corpus
 getCorpusForLang SK = (testContext, testOptions, [])
 getCorpusForLang SV = SVTime.corpus
 getCorpusForLang SW = (testContext, testOptions, [])
 getCorpusForLang TA = (testContext, testOptions, [])
+getCorpusForLang TE = (testContext, testOptions, [])
 getCorpusForLang TH = (testContext, testOptions, [])
 getCorpusForLang TR = (testContext, testOptions, [])
 getCorpusForLang UK = UKTime.corpus
